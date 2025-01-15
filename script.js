@@ -1,20 +1,24 @@
-function appendValue(value) {
-    const display = document.getElementById("display");
-    display.value += value;
+// Add value to display
+function appendToDisplay(value) {
+    document.getElementById('display').value += value;
 }
 
+// Clear display
 function clearDisplay() {
-    document.getElementById("display").value = "";
+    document.getElementById('display').value = '';
 }
 
+// Calculate the result
 function calculateResult() {
-    const display = document.getElementById("display");
+    let displayValue = document.getElementById('display').value;
     try {
-        display.value = eval(display.value);
-    } catch {
-        alert("Invalid Input");
+        let result = eval(displayValue);
+        document.getElementById('display').value = result;
+    } catch (e) {
+        document.getElementById('display').value = "Error";
     }
 }
+
 // Handle square root
 function handleSquareRoot() {
     let displayValue = document.getElementById('display').value;
