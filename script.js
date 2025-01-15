@@ -15,3 +15,9 @@ function calculateResult() {
         alert("Invalid Input");
     }
 }
+// Handle square root
+function handleSquareRoot() {
+    let displayValue = document.getElementById('display').value;
+    let result = Math.sqrt(displayValue);
+    document.getElementById('display').value = result;
+}
